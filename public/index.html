@@ -1383,8 +1383,6 @@
 
       if (res.ok) {
         showStatus('Message sent. Ryan will be in touch shortly.', 'success');
-        document.getElementById('contactForm').reset();
-        // Clear individual fields since reset() may not catch all
         ['firstName','lastName','email','reason','message'].forEach(id => {
           const el = document.getElementById(id);
           if (el) el.value = '';
