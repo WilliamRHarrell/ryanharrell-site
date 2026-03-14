@@ -8,14 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #0a0a0a;
-    --white: #f5f2ee;
-    --cream: #e8e2d8;
-    --gold: #c9a84c;
-    --gold-light: #e4c46e;
-    --red: #b8272c;
-    --mid: #1a1a1a;
-    --muted: #888;
+    --ink: #010e1c;
+    --white: #f0f4f8;
+    --cream: #c8ddf0;
+    --gold: #3E7EB5;
+    --gold-light: #5a96c8;
+    --red: #17507E;
+    --mid: #012C55;
+    --muted: #6a96b8;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -198,8 +198,8 @@
   .hero-portrait-placeholder {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
-    border: 1px solid rgba(201,168,76,0.2);
+    background: linear-gradient(135deg, #012C55 0%, #010e1c 100%);
+    border: 1px solid rgba(62,126,181,0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,7 +216,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: rgba(201,168,76,0.1);
+    background: rgba(62,126,181,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -235,11 +235,13 @@
 
   /* ── STATS BAR ── */
   .stats-bar {
-    background: var(--gold);
+    background: #012C55;
     padding: 1.8rem 6rem;
     display: flex;
     gap: 0;
     align-items: center;
+    border-top: 2px solid #17507E;
+    border-bottom: 2px solid #17507E;
   }
 
   .stat-item {
@@ -248,7 +250,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0.2rem;
-    border-right: 1px solid rgba(10,10,10,0.15);
+    border-right: 1px solid rgba(62,126,181,0.3);
     padding: 0 1rem;
   }
   .stat-item:last-child { border-right: none; }
@@ -257,7 +259,7 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.8rem;
     letter-spacing: 0.05em;
-    color: var(--ink);
+    color: #3E7EB5;
     line-height: 1;
   }
 
@@ -267,7 +269,7 @@
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(10,10,10,0.65);
+    color: rgba(200,221,240,0.65);
     text-align: center;
   }
 
@@ -307,7 +309,7 @@
   }
 
   /* ── ABOUT ── */
-  #about { background: #0f0f0f; }
+  #about { background: #021222; }
 
   .about-grid {
     display: grid;
@@ -319,7 +321,7 @@
   .about-body {
     font-size: 1.05rem;
     line-height: 1.8;
-    color: #bbb;
+    color: #8ab0cc;
   }
 
   .about-body p + p { margin-top: 1.2rem; }
@@ -335,7 +337,7 @@
   .highlight-card {
     border-left: 3px solid var(--gold);
     padding: 1rem 1.5rem;
-    background: rgba(201,168,76,0.04);
+    background: rgba(62,126,181,0.07);
   }
 
   .highlight-card h4 {
@@ -361,13 +363,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5px;
-    background: rgba(201,168,76,0.1);
-    border: 1px solid rgba(201,168,76,0.1);
+    background: rgba(62,126,181,0.15);
+    border: 1px solid rgba(62,126,181,0.15);
     margin-top: 3rem;
   }
 
   .venture-card {
-    background: #0d0d0d;
+    background: #021525;
     padding: 2.5rem 2rem;
     transition: background 0.3s;
     position: relative;
@@ -386,7 +388,7 @@
   }
 
   .venture-card:hover::before { transform: scaleX(1); }
-  .venture-card:hover { background: #111; }
+  .venture-card:hover { background: #032038; }
 
   .venture-icon {
     font-size: 2rem;
@@ -418,24 +420,24 @@
   }
 
   /* ── PRESS ── */
-  #press { background: #0a0a0a; }
+  #press { background: #021222; }
 
   .press-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1px;
-    background: rgba(201,168,76,0.08);
+    background: rgba(62,126,181,0.12);
     margin-top: 3rem;
   }
 
   .press-card {
-    background: #0d0d0d;
+    background: #021525;
     padding: 2rem 2.5rem;
-    border-bottom: 1px solid rgba(201,168,76,0.06);
+    border-bottom: 1px solid rgba(62,126,181,0.1);
     transition: background 0.2s;
   }
 
-  .press-card:hover { background: #111; }
+  .press-card:hover { background: #032038; }
 
   .press-source {
     font-family: 'Barlow Condensed', sans-serif;
@@ -459,19 +461,19 @@
 
   .press-snippet {
     font-size: 0.85rem;
-    color: #777;
+    color: #7aa3c0;
     line-height: 1.5;
   }
 
   /* ── AWARDS ── */
-  #awards { background: #0f0f0f; }
+  #awards { background: #010e1c; }
 
   .awards-ticker {
     overflow: hidden;
     margin-top: 3rem;
     padding: 1.5rem 0;
-    border-top: 1px solid rgba(201,168,76,0.15);
-    border-bottom: 1px solid rgba(201,168,76,0.15);
+    border-top: 1px solid rgba(62,126,181,0.2);
+    border-bottom: 1px solid rgba(62,126,181,0.2);
   }
 
   .ticker-track {
@@ -490,7 +492,7 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.2rem;
     letter-spacing: 0.1em;
-    color: rgba(201,168,76,0.5);
+    color: rgba(62,126,181,0.6);
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -500,7 +502,7 @@
   .ticker-item .dot {
     width: 6px;
     height: 6px;
-    background: var(--red);
+    background: #3E7EB5;
     border-radius: 50%;
     flex-shrink: 0;
   }
@@ -513,7 +515,7 @@
   }
 
   .award-pill {
-    border: 1px solid rgba(201,168,76,0.2);
+    border: 1px solid rgba(62,126,181,0.25);
     padding: 1.2rem;
     text-align: center;
     transition: border-color 0.2s, background 0.2s;
@@ -521,7 +523,7 @@
 
   .award-pill:hover {
     border-color: var(--gold);
-    background: rgba(201,168,76,0.05);
+    background: rgba(62,126,181,0.08);
   }
 
   .award-pill .num {
@@ -537,7 +539,7 @@
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #777;
+    color: #6a96b8;
     margin-top: 0.3rem;
   }
 
@@ -548,12 +550,12 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1px;
-    background: rgba(255,255,255,0.05);
+    background: rgba(62,126,181,0.1);
     margin-top: 3rem;
   }
 
   .social-card {
-    background: #0d0d0d;
+    background: #021525;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -562,7 +564,7 @@
     transition: background 0.2s;
   }
 
-  .social-card:hover { background: #131313; }
+  .social-card:hover { background: #032038; }
 
   .social-platform {
     font-family: 'Barlow Condensed', sans-serif;
@@ -611,7 +613,9 @@
 
   /* ── MISSION BAND ── */
   .mission-band {
-    background: var(--red);
+    background: #012C55;
+    border-top: 3px solid #3E7EB5;
+    border-bottom: 3px solid #3E7EB5;
     padding: 3.5rem 6rem;
     display: flex;
     align-items: center;
@@ -629,7 +633,7 @@
   }
 
   /* ── CONTACT ── */
-  #contact { background: #080808; }
+  #contact { background: #021222; }
 
   .contact-grid {
     display: grid;
@@ -642,7 +646,7 @@
 
   .contact-body {
     font-size: 1rem;
-    color: #888;
+    color: #7aa3c0;
     line-height: 1.8;
     margin-bottom: 2rem;
   }
@@ -673,8 +677,8 @@
   .form-field input,
   .form-field textarea,
   .form-field select {
-    background: #111;
-    border: 1px solid rgba(201,168,76,0.15);
+    background: #012040;
+    border: 1px solid rgba(62,126,181,0.25);
     color: var(--white);
     font-family: 'Barlow', sans-serif;
     font-size: 0.95rem;
@@ -690,12 +694,120 @@
     border-color: var(--gold);
   }
 
-  .form-field select option { background: #111; }
+  .form-field select option { background: #012040; }
+
+  /* ── CONSULTING ── */
+  #consulting { background: #012C55; }
+
+  .consulting-intro {
+    max-width: 700px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #a8c8e0;
+    margin-bottom: 3.5rem;
+  }
+
+  .consulting-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: rgba(62,126,181,0.2);
+    border: 1px solid rgba(62,126,181,0.2);
+    margin-bottom: 4rem;
+  }
+
+  .consult-card {
+    background: #021d3d;
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .consult-card:hover { background: #032850; }
+
+  .consult-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #17507E, #3E7EB5);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+  }
+
+  .consult-card:hover::after { transform: scaleX(1); }
+
+  .consult-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: rgba(62,126,181,0.18);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.04em;
+  }
+
+  .consult-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+
+  .consult-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #3E7EB5;
+    margin-bottom: 1rem;
+  }
+
+  .consult-desc {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: #7aa3c0;
+  }
+
+  .consult-cta-block {
+    background: rgba(1,44,85,0.6);
+    border: 1px solid rgba(62,126,181,0.25);
+    padding: 3rem 3.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .consult-cta-block h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+
+  .consult-cta-block p {
+    font-size: 0.95rem;
+    color: #7aa3c0;
+    line-height: 1.6;
+    max-width: 520px;
+  }
+
+  .consult-cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex-shrink: 0;
+  }
 
   /* ── FOOTER ── */
   footer {
-    background: var(--ink);
-    border-top: 1px solid rgba(201,168,76,0.1);
+    background: #010e1c;
+    border-top: 1px solid rgba(62,126,181,0.15);
     padding: 2.5rem 6rem;
     display: flex;
     align-items: center;
@@ -713,7 +825,7 @@
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.12em;
-    color: #444;
+    color: #3a6080;
   }
 
   .footer-links {
@@ -753,7 +865,10 @@
     .hero { grid-template-columns: 1fr; }
     .hero-right { display: none; }
     .hero-left { padding: 8rem 2rem 4rem; }
-    .stats-bar { padding: 1.5rem 2rem; }
+    .stats-bar { padding: 1.5rem 1rem; flex-wrap: wrap; gap: 0; }
+    .stat-item { flex: 0 0 50%; border-right: none; border-bottom: 1px solid rgba(62,126,181,0.2); padding: 1rem; }
+    .stat-item:nth-child(odd) { border-right: 1px solid rgba(62,126,181,0.2); }
+    .stat-item:last-child { flex: 0 0 100%; border-bottom: none; }
     .section-inner { padding: 4rem 2rem; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
     .ventures-grid { grid-template-columns: 1fr; }
@@ -777,6 +892,7 @@
     <li><a href="#press">Press</a></li>
     <li><a href="#awards">Awards</a></li>
     <li><a href="#social">Connect</a></li>
+    <li><a href="#consulting" style="color:var(--gold);">Hire Ryan</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -801,11 +917,7 @@
   <div class="hero-right">
     <div class="hero-bg-pattern"></div>
     <div class="hero-portrait-frame">
-      <div class="hero-portrait-placeholder">
-        <div class="portrait-icon">👤</div>
-        <span>Add Your Photo</span>
-        <span style="font-size:0.65rem;color:#555">Replace with headshot</span>
-      </div>
+<img src="ryan-hero.jpg" alt="Ryan Harrell" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
       <div class="frame-accent tl"></div>
       <div class="frame-accent br"></div>
     </div>
@@ -815,7 +927,7 @@
 <!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stat-item">
-    <span class="stat-num">13+</span>
+    <span class="stat-num">5</span>
     <span class="stat-label">Studio Locations</span>
   </div>
   <div class="stat-item">
@@ -823,12 +935,12 @@
     <span class="stat-label">National Awards</span>
   </div>
   <div class="stat-item">
-    <span class="stat-num">$80K+</span>
+    <span class="stat-num">$100K+</span>
     <span class="stat-label">Donated to Veterans</span>
   </div>
   <div class="stat-item">
-    <span class="stat-num">9</span>
-    <span class="stat-label">Annual Conventions</span>
+    <span class="stat-num">6</span>
+    <span class="stat-label">Active Businesses</span>
   </div>
   <div class="stat-item">
     <span class="stat-num">25+</span>
@@ -846,10 +958,10 @@
         <div class="section-rule"></div>
         <div class="about-body">
           <p>Ryan Harrell is a <strong>Fayetteville, NC-based entrepreneur</strong> with over two decades of experience building brands, leading companies, and creating ecosystems that others said couldn't exist.</p>
-          <p>As the co-founder of <strong>American Tattoo Society</strong>, Ryan turned a single tattoo studio near Fort Bragg into the most recognized tattoo brand in military communities — operating on Army, Air Force, and Marine bases across the United States.</p>
-          <p>As the founder of the <strong>All American Tattoo Convention</strong>, he created one of the most respected tattoo events on the East Coast, raising over $80,000 for veteran-focused nonprofits since 2016.</p>
+          <p>As the co-founder of <strong>American Tattoo Society</strong>, Ryan turned a single tattoo studio near Fort Bragg into the most recognized tattoo brand serving military communities across the United States — the pioneers who wrote the regulations for on-base tattooing with the U.S. Army.</p>
+          <p>As the founder of the <strong>All American Tattoo Convention</strong>, he created one of the most respected tattoo events on the East Coast, raising over $100,000 for veteran-focused nonprofits since 2016.</p>
           <p>Before ATS, Ryan built and sold <strong>three award-winning marketing firms</strong>, earning recognition as one of <strong>40 Under 40</strong> in Southeastern NC and winning 60+ national and international awards for design, marketing, and business excellence.</p>
-          <p>His mission is clear: <strong>keep the tattoo industry independent</strong>, keep military communities served, and keep building what others only talk about.</p>
+          <p>His mission is clear: <strong>keep the tattoo industry controlled by tattooing</strong>, keep military communities served, and keep building what others only talk about.</p>
         </div>
       </div>
       <div class="about-highlights">
@@ -863,7 +975,7 @@
         </div>
         <div class="highlight-card">
           <h4>40 Under 40 Honoree</h4>
-          <p>Named one of the top young entrepreneurs in Southeastern North Carolina. Board advisor to FTCC's Small Business Center and Advertising & Graphic Design departments.</p>
+          <p>Named one of the top young entrepreneurs in Southeastern North Carolina. Advisor to both FTCC (Fayetteville Technical Community College) and FSU (Fayetteville State University) — contributing expertise to entrepreneurship and creative programs in his hometown.</p>
         </div>
         <div class="highlight-card">
           <h4>Philanthropy in Action</h4>
@@ -887,17 +999,17 @@
         <div>
           <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Flagship Venture</div>
           <div class="venture-name" style="font-size:3rem;margin-bottom:0.5rem;">American Tattoo Society</div>
-          <div class="venture-tag">Tattoo Studio Chain · 13+ U.S. Locations · Military Installations</div>
-          <p class="venture-desc" style="margin-top:1rem;font-size:0.95rem;color:#aaa;line-height:1.7;">ATS is the only tattoo brand in the United States permitted to operate on military bases — serving soldiers and their families on Army, Air Force, and Marine installations nationwide. What started near Fort Bragg is now a 13-location powerhouse with world-class artists, the highest-rated studios in their markets, and a reputation built on excellence, not corporate compromise.</p>
+          <div class="venture-tag">Tattoo Studio Chain · Military Community Focus · Est. 2013</div>
+          <p class="venture-desc" style="margin-top:1rem;font-size:0.95rem;color:#aaa;line-height:1.7;">ATS pioneered on-base tattooing — writing the regulations with the U.S. Army to make it possible — and built one of the most respected tattoo brands in military communities nationwide. With 5 locations and a legacy of excellence, ATS has the highest-rated studios in their markets and a reputation built on craft, not compromise.</p>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
           <div style="border:1px solid rgba(201,168,76,0.2);padding:1.5rem;text-align:center;">
-            <div style="font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--gold);line-height:1;">13+</div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--gold);line-height:1;">5</div>
             <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#666;margin-top:0.3rem;">Studio Locations</div>
           </div>
           <div style="border:1px solid rgba(201,168,76,0.2);padding:1.5rem;text-align:center;">
-            <div style="font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--gold);line-height:1;">#1</div>
-            <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#666;margin-top:0.3rem;">On-Base Tattoo Brand</div>
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--gold);line-height:1;">Pioneer</div>
+            <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#666;margin-top:0.3rem;">Wrote On-Base Regs</div>
           </div>
           <div style="border:1px solid rgba(201,168,76,0.2);padding:1.5rem;text-align:center;">
             <div style="font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--gold);line-height:1;">5+</div>
@@ -922,23 +1034,30 @@
         <div class="venture-tag">Medical-Grade Aftercare</div>
         <p class="venture-desc">Premium, medical-grade tattoo and piercing aftercare developed to meet the highest standards. Built for professionals and clients who refuse to compromise on the healing process.</p>
       </div>
+
       <div class="venture-card">
-        <div class="venture-icon">🤖</div>
-        <div class="venture-name">AX Builds</div>
-        <div class="venture-tag">AI Media · Content Empire</div>
-        <p class="venture-desc">Ryan's next frontier — an AI-powered media character and content ecosystem designed to scale influence, automate storytelling, and prove that independent creators can compete at any level.</p>
-      </div>
-      <div class="venture-card">
-        <div class="venture-icon">📡</div>
+        <div class="venture-icon">📺</div>
         <div class="venture-name">Pitch Digital Media</div>
-        <div class="venture-tag">Digital Advertising</div>
-        <p class="venture-desc">Ryan's digital advertising platform, applying two decades of brand-building expertise to scalable media solutions for businesses ready to grow.</p>
+        <div class="venture-tag">DOOH Advertising Network</div>
+        <p class="venture-desc">A Digital Out-of-Home (DOOH) advertising company that places screens inside local businesses — building a hyper-local network that connects community advertisers with real audiences in real places.</p>
       </div>
       <div class="venture-card">
         <div class="venture-icon">🎨</div>
         <div class="venture-name">ARC Design Agency</div>
-        <div class="venture-tag">Founded & Exited · Marketing</div>
-        <p class="venture-desc">One of three award-winning marketing firms Ryan built and scaled. ARC was where he sharpened his expertise in brand development, web design, and digital strategy — before the industry even had a roadmap.</p>
+        <div class="venture-tag">Co-Founded & Exited · Web & Brand Design</div>
+        <p class="venture-desc">One of Ryan's award-winning marketing firms, where he built expertise in web development, brand design, and digital strategy from the ground up — before the industry had a playbook for any of it.</p>
+      </div>
+      <div class="venture-card">
+        <div class="venture-icon">🏢</div>
+        <div class="venture-name">219 Group</div>
+        <div class="venture-tag">Partner & Creative Director · Exited 2014</div>
+        <p class="venture-desc">Ryan served as Partner and Creative Director at 219 Group, a full-service creative agency. He sold his stake to partner Kirk deViere in 2014 — exiting to co-found American Tattoo Society with his wife Nicole and plant his flag fully in the tattoo industry.</p>
+      </div>
+      <div class="venture-card">
+        <div class="venture-icon">🎮</div>
+        <div class="venture-name">GamePusher</div>
+        <div class="venture-tag">Founded 1999 · Closed 2001 · Where It All Began</div>
+        <p class="venture-desc">Ryan's first business — an ecommerce operation selling video games on eBay and through his own online storefront. Started in 1999, GamePusher was the spark that lit the entrepreneurial fire. He closed it in 2001 to open a web design studio that eventually became ARC Design Agency.</p>
       </div>
     </div>
   </div>
@@ -955,12 +1074,12 @@
       <div class="press-card">
         <div class="press-source">PR.com · Press Release</div>
         <div class="press-headline">All American Tattoo Convention Donates Over $10K After Successful Show</div>
-        <p class="press-snippet">The Harrells are highlighted as founders of AATC, which has donated over $80K to veteran nonprofits since 2016 and is consistently named one of the top tattoo events nationwide.</p>
+        <p class="press-snippet">The Harrells are highlighted as founders of AATC, which has donated over $100K to veteran nonprofits since 2016 and is consistently named one of the top tattoo events nationwide.</p>
       </div>
       <div class="press-card">
         <div class="press-source">American Tattoo Society · Press</div>
         <div class="press-headline">ATS Announces Its 13th Studio — Norfolk, Virginia</div>
-        <p class="press-snippet">Ryan is quoted as President of ATS on the expansion into the Norfolk Naval Station market, noting ATS remains the only studio permitted to operate on military installations.</p>
+        <p class="press-snippet">Ryan is quoted as President of ATS on the expansion into the Norfolk Naval Station market, highlighting ATS's legacy as the pioneering tattoo brand that wrote the book on military community tattooing.</p>
       </div>
       <div class="press-card">
         <div class="press-source">It's Me, Tee · Lifestyle Media</div>
@@ -975,7 +1094,7 @@
       <div class="press-card">
         <div class="press-source">American Tattoo Society · Expansion</div>
         <div class="press-headline">ATS Announces Four New Hires as It Expands Nationally</div>
-        <p class="press-snippet">Ryan comments on growth milestones, including adding James Vaughn (Inkmaster Season 1) as Artist Manager and opening on Nellis Air Force Base in Las Vegas — a first-of-its-kind location.</p>
+        <p class="press-snippet">Ryan comments on growth milestones, including adding James Vaughn (Inkmaster Season 1) as Artist Manager and opening on Nellis Air Force Base in Las Vegas — a historic first-of-its-kind milestone.</p>
       </div>
       <div class="press-card">
         <div class="press-source">Veteran Ink · Partnership</div>
@@ -1003,7 +1122,7 @@
         <div class="ticker-item"><div class="dot"></div>Award-Winning Design Since 1999</div>
         <div class="ticker-item"><div class="dot"></div>Top Tattoo Convention · East Coast</div>
         <div class="ticker-item"><div class="dot"></div>First On-Base Tattoo Brand in the US</div>
-        <div class="ticker-item"><div class="dot"></div>$80K+ Donated to Veterans</div>
+        <div class="ticker-item"><div class="dot"></div>$100K+ Donated to Veterans</div>
         <!-- Repeat for infinite loop -->
         <div class="ticker-item"><div class="dot"></div>60+ National & International Awards</div>
         <div class="ticker-item"><div class="dot"></div>40 Under 40 · Southeastern NC</div>
@@ -1012,7 +1131,7 @@
         <div class="ticker-item"><div class="dot"></div>Award-Winning Design Since 1999</div>
         <div class="ticker-item"><div class="dot"></div>Top Tattoo Convention · East Coast</div>
         <div class="ticker-item"><div class="dot"></div>First On-Base Tattoo Brand in the US</div>
-        <div class="ticker-item"><div class="dot"></div>$80K+ Donated to Veterans</div>
+        <div class="ticker-item"><div class="dot"></div>$100K+ Donated to Veterans</div>
       </div>
     </div>
 
@@ -1026,8 +1145,8 @@
         <div class="lbl">Marketing Firms Built & Sold</div>
       </div>
       <div class="award-pill">
-        <div class="num">#1</div>
-        <div class="lbl">First On-Base Tattoo Brand</div>
+        <div class="num">Pioneer</div>
+        <div class="lbl">Wrote On-Base Army Regs</div>
       </div>
       <div class="award-pill">
         <div class="num">25+</div>
@@ -1039,7 +1158,7 @@
 
 <!-- MISSION BAND -->
 <div class="mission-band">
-  <div class="mission-text">"The tattoo industry doesn't need to be sold to a corporation.<br>It needs builders who give a damn."</div>
+  <div class="mission-text">"The tattoo industry needs builders who give a damn about tattooing."</div>
   <a href="#contact" class="btn-primary" style="flex-shrink:0;">Work With Ryan</a>
 </div>
 
@@ -1069,13 +1188,84 @@
         <p class="social-desc">Event announcements, convention updates, ATS news, and community engagement across military markets.</p>
         <div class="social-action">Follow →</div>
       </a>
-      <a class="social-card" href="http://ryanharrell.com" target="_blank">
-        <div class="social-platform"><span class="platform-dot dot-web"></span> Web</div>
-        <div class="social-handle">ryanharrell.com</div>
-        <p class="social-desc">The full story. Ventures, press, awards, and everything Ryan is building. You're already here.</p>
-        <div class="social-action">Explore →</div>
+      <a class="social-card" href="https://x.com/williamharrell" target="_blank">
+        <div class="social-platform"><span class="platform-dot" style="background:#fff;"></span> X / Twitter</div>
+        <div class="social-handle">@williamharrell</div>
+        <p class="social-desc">Real-time thoughts on entrepreneurship, the tattoo industry, and building businesses that matter.</p>
+        <div class="social-action">Follow →</div>
       </a>
     </div>
+  </div>
+</section>
+
+<!-- CONSULTING -->
+<section id="consulting">
+  <div class="section-inner">
+    <div class="section-label">Work With Ryan</div>
+    <h2 class="section-title">Consulting &<br>Advisory</h2>
+    <div class="section-rule"></div>
+
+    <p class="consulting-intro">
+      25+ years of building brands, growing businesses, and navigating industries others couldn't crack. Ryan brings hard-won, real-world expertise to founders, operators, and creatives who need someone who's actually done it — not just talked about it.
+    </p>
+
+    <div class="consulting-grid">
+
+      <div class="consult-card">
+        <div class="consult-number">01</div>
+        <div class="consult-title">Tattoo Industry Strategy</div>
+        <div class="consult-tag">Industry · Operations · Growth</div>
+        <p class="consult-desc">Ryan built the largest on-base tattoo brand in U.S. military history from scratch. He knows studio operations, artist management, multi-location expansion, military market penetration, and how to position a tattoo brand to last. Whether you're opening your first shop or scaling to 10, Ryan has walked that road.</p>
+      </div>
+
+      <div class="consult-card">
+        <div class="consult-number">02</div>
+        <div class="consult-title">Brand & Creative Direction</div>
+        <div class="consult-tag">Branding · Design · Identity</div>
+        <p class="consult-desc">60+ national and international awards for design and marketing don't happen by accident. Ryan has built and sold three marketing agencies and directed creative for dozens of brands. From naming and visual identity to digital presence and content strategy — he'll help you build something people remember.</p>
+      </div>
+
+      <div class="consult-card">
+        <div class="consult-number">03</div>
+        <div class="consult-title">Event & Convention Consulting</div>
+        <div class="consult-tag">Events · Sponsorship · Promotion</div>
+        <p class="consult-desc">Founding and running the All American Tattoo Convention since 2016 taught Ryan everything about producing world-class events — logistics, artist booking, sponsorship, community engagement, and turning a convention into a movement. If you're building a live event in the tattoo or creative industries, this is the consultation you need.</p>
+      </div>
+
+      <div class="consult-card">
+        <div class="consult-number">04</div>
+        <div class="consult-title">Digital Marketing & SEO</div>
+        <div class="consult-tag">Marketing · SEO · Paid Ads · Social</div>
+        <p class="consult-desc">Ryan started building brands online before most people had a Facebook account. He's led campaigns, built agencies, and grown businesses through organic SEO, paid media, and social content — with a specialty in local and military market targeting for service businesses.</p>
+      </div>
+
+      <div class="consult-card">
+        <div class="consult-number">05</div>
+        <div class="consult-title">Entrepreneur Mentorship</div>
+        <div class="consult-tag">Mentorship · Accountability · Vision</div>
+        <p class="consult-desc">Ryan has built businesses in wildly different industries — from digital agencies and security companies to tattoo empires and live events. He doesn't offer theory. He offers the hard lessons, the right questions, and the framework that comes from two-plus decades of building, failing, and building again.</p>
+      </div>
+
+      <div class="consult-card">
+        <div class="consult-number">06</div>
+        <div class="consult-title">Military Market Entry</div>
+        <div class="consult-tag">Military · B2G · On-Base Business</div>
+        <p class="consult-desc">ATS was the first tattoo brand to ever operate on U.S. military installations — and Ryan was the one who made it happen, writing the regulations with the U.S. Army from scratch. He navigated the MWR system, built base command relationships, and mastered the unique demands of military community business. For businesses looking to serve or partner with the military market, his experience is unmatched.</p>
+      </div>
+
+    </div>
+
+    <div class="consult-cta-block">
+      <div>
+        <h3>Ready to Work Together?</h3>
+        <p>Ryan takes a limited number of consulting engagements each quarter. Reach out with what you're building — project-based, retainer, or advisory board arrangements considered. No fluff. Just real conversations about real business.</p>
+      </div>
+      <div class="consult-cta-buttons">
+        <a href="#contact" class="btn-primary">Start the Conversation</a>
+        <a href="/cdn-cgi/l/email-protection#8cfef5ede2ccfef5ede2e4edfefee9e0e0a2efe3e1" class="btn-ghost"><span class="__cf_email__" data-cfemail="53212a323d13212a323d3b322121363f3f7d303c3e">[email&#160;protected]</span></a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1092,7 +1282,7 @@
         </p>
         <div style="display:flex; flex-direction:column; gap:0.8rem;">
           <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">Email</div>
-          <div style="color:#ccc;font-size:0.95rem;">ryan@ryanharrell.com</div>
+          <div style="color:#ccc;font-size:0.95rem;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aad8d3cbc4ead8d3cbc4c2cbd8d8cfc6c684c9c5c7">[email&#160;protected]</a></div>
           <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-top:0.5rem;">Location</div>
           <div style="color:#ccc;font-size:0.95rem;">Fayetteville, North Carolina</div>
         </div>
@@ -1117,6 +1307,7 @@
             <label>Reason for Reaching Out</label>
             <select id="reason">
               <option value="">Select one...</option>
+              <option>Consulting Inquiry</option>
               <option>Speaking / Media</option>
               <option>Business Partnership</option>
               <option>American Tattoo Society</option>
@@ -1130,7 +1321,7 @@
             <textarea id="message" rows="5" placeholder="Tell me what you're building..."></textarea>
           </div>
           <div id="formStatus" style="display:none;font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;letter-spacing:0.08em;padding:0.8rem 1rem;border-left:3px solid;"></div>
-          <button class="btn-primary" id="submitBtn" style="align-self:flex-start;border:none;cursor:pointer;" onclick="handleSubmit()">Send Message</button>
+          <button class="btn-primary" id="submitBtn" style="align-self:flex-start;border:none;cursor:pointer;">Send Message</button>
         </div>
       </div>
     </div>
@@ -1143,26 +1334,18 @@
   <ul class="footer-links">
     <li><a href="#about">About</a></li>
     <li><a href="#ventures">Ventures</a></li>
+    <li><a href="#consulting">Consulting</a></li>
     <li><a href="#press">Press</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="footer-copy">© 2026 Ryan Harrell · All Rights Reserved</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── CONTACT FORM HANDLER ──────────────────────────────────────────
-  // 🔧 BACKEND SETUP: Replace the FORM_ENDPOINT value below with your
-  //    API route. The form will POST JSON: { firstName, lastName, email,
-  //    reason, message } and expects { success: true } on success.
-  //
-  //    Options to wire this up:
-  //    • Resend API route (e.g. /api/contact) — recommended if you're on Next.js/Vercel
-  //    • Formspree: https://formspree.io  → set endpoint to your Formspree URL
-  //    • Netlify Forms: add netlify attribute to the form element
-  //    • EmailJS: swap fetch() for emailjs.send()
-  // ─────────────────────────────────────────────────────────────────
+  const FORM_ENDPOINT = '/api/contact';
 
-  const FORM_ENDPOINT = '/api/contact'; // ← REPLACE THIS
+  document.getElementById('submitBtn').addEventListener('click', handleSubmit);
 
   async function handleSubmit() {
     const btn = document.getElementById('submitBtn');
@@ -1220,9 +1403,9 @@
     const el = document.getElementById('formStatus');
     el.textContent = msg;
     el.style.display = 'block';
-    el.style.borderColor = type === 'success' ? 'var(--gold)' : 'var(--red)';
-    el.style.color = type === 'success' ? 'var(--gold)' : '#e87070';
-    el.style.background = type === 'success' ? 'rgba(201,168,76,0.06)' : 'rgba(184,39,44,0.08)';
+    el.style.borderColor = type === 'success' ? '#3E7EB5' : '#17507E';
+    el.style.color = type === 'success' ? '#a8d4f0' : '#90c0e0';
+    el.style.background = type === 'success' ? 'rgba(62,126,181,0.1)' : 'rgba(23,80,126,0.15)';
   }
 
   // ── SCROLL FADE-UP ANIMATIONS ──────────────────────────────────────
@@ -1232,18 +1415,10 @@
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.venture-card, .press-card, .award-pill, .highlight-card, .social-card').forEach(el => {
+  document.querySelectorAll('.venture-card, .press-card, .award-pill, .highlight-card, .social-card, .consult-card').forEach(el => {
     el.classList.add('fade-up');
     observer.observe(el);
   });
 
   // Stagger children
-  document.querySelectorAll('.ventures-grid, .press-grid, .awards-grid, .social-strip, .about-highlights').forEach(grid => {
-    [...grid.children].forEach((child, i) => {
-      child.style.transitionDelay = `${i * 0.08}s`;
-    });
-  });
-</script>
-
-</body>
-</html>
+  document.querySelectorAll('.venture
