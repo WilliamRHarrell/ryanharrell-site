@@ -8,14 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #010e1c;
-    --white: #f0f4f8;
-    --cream: #c8ddf0;
-    --gold: #3E7EB5;
-    --gold-light: #5a96c8;
-    --red: #17507E;
-    --mid: #012C55;
-    --muted: #6a96b8;
+    --ink: #0a0a0a;
+    --white: #f5f2ee;
+    --cream: #e8e2d8;
+    --gold: #c9a84c;
+    --gold-light: #e4c46e;
+    --red: #b8272c;
+    --mid: #1a1a1a;
+    --muted: #888;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -198,8 +198,8 @@
   .hero-portrait-placeholder {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #012C55 0%, #010e1c 100%);
-    border: 1px solid rgba(62,126,181,0.3);
+    background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+    border: 1px solid rgba(201,168,76,0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,7 +216,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: rgba(62,126,181,0.15);
+    background: rgba(201,168,76,0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -235,13 +235,11 @@
 
   /* ── STATS BAR ── */
   .stats-bar {
-    background: #012C55;
+    background: var(--gold);
     padding: 1.8rem 6rem;
     display: flex;
     gap: 0;
     align-items: center;
-    border-top: 2px solid #17507E;
-    border-bottom: 2px solid #17507E;
   }
 
   .stat-item {
@@ -250,7 +248,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0.2rem;
-    border-right: 1px solid rgba(62,126,181,0.3);
+    border-right: 1px solid rgba(10,10,10,0.15);
     padding: 0 1rem;
   }
   .stat-item:last-child { border-right: none; }
@@ -259,7 +257,7 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.8rem;
     letter-spacing: 0.05em;
-    color: #3E7EB5;
+    color: var(--ink);
     line-height: 1;
   }
 
@@ -269,7 +267,7 @@
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(200,221,240,0.65);
+    color: rgba(10,10,10,0.65);
     text-align: center;
   }
 
@@ -309,7 +307,7 @@
   }
 
   /* ── ABOUT ── */
-  #about { background: #021222; }
+  #about { background: #0f0f0f; }
 
   .about-grid {
     display: grid;
@@ -321,7 +319,7 @@
   .about-body {
     font-size: 1.05rem;
     line-height: 1.8;
-    color: #8ab0cc;
+    color: #bbb;
   }
 
   .about-body p + p { margin-top: 1.2rem; }
@@ -337,7 +335,7 @@
   .highlight-card {
     border-left: 3px solid var(--gold);
     padding: 1rem 1.5rem;
-    background: rgba(62,126,181,0.07);
+    background: rgba(201,168,76,0.04);
   }
 
   .highlight-card h4 {
@@ -363,13 +361,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5px;
-    background: rgba(62,126,181,0.15);
-    border: 1px solid rgba(62,126,181,0.15);
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.1);
     margin-top: 3rem;
   }
 
   .venture-card {
-    background: #021525;
+    background: #0d0d0d;
     padding: 2.5rem 2rem;
     transition: background 0.3s;
     position: relative;
@@ -388,7 +386,7 @@
   }
 
   .venture-card:hover::before { transform: scaleX(1); }
-  .venture-card:hover { background: #032038; }
+  .venture-card:hover { background: #111; }
 
   .venture-icon {
     font-size: 2rem;
@@ -420,24 +418,24 @@
   }
 
   /* ── PRESS ── */
-  #press { background: #021222; }
+  #press { background: #0a0a0a; }
 
   .press-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1px;
-    background: rgba(62,126,181,0.12);
+    background: rgba(201,168,76,0.08);
     margin-top: 3rem;
   }
 
   .press-card {
-    background: #021525;
+    background: #0d0d0d;
     padding: 2rem 2.5rem;
-    border-bottom: 1px solid rgba(62,126,181,0.1);
+    border-bottom: 1px solid rgba(201,168,76,0.06);
     transition: background 0.2s;
   }
 
-  .press-card:hover { background: #032038; }
+  .press-card:hover { background: #111; }
 
   .press-source {
     font-family: 'Barlow Condensed', sans-serif;
@@ -461,19 +459,19 @@
 
   .press-snippet {
     font-size: 0.85rem;
-    color: #7aa3c0;
+    color: #777;
     line-height: 1.5;
   }
 
   /* ── AWARDS ── */
-  #awards { background: #010e1c; }
+  #awards { background: #0f0f0f; }
 
   .awards-ticker {
     overflow: hidden;
     margin-top: 3rem;
     padding: 1.5rem 0;
-    border-top: 1px solid rgba(62,126,181,0.2);
-    border-bottom: 1px solid rgba(62,126,181,0.2);
+    border-top: 1px solid rgba(201,168,76,0.15);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
   }
 
   .ticker-track {
@@ -492,7 +490,7 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.2rem;
     letter-spacing: 0.1em;
-    color: rgba(62,126,181,0.6);
+    color: rgba(201,168,76,0.5);
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -502,7 +500,7 @@
   .ticker-item .dot {
     width: 6px;
     height: 6px;
-    background: #3E7EB5;
+    background: var(--red);
     border-radius: 50%;
     flex-shrink: 0;
   }
@@ -515,7 +513,7 @@
   }
 
   .award-pill {
-    border: 1px solid rgba(62,126,181,0.25);
+    border: 1px solid rgba(201,168,76,0.2);
     padding: 1.2rem;
     text-align: center;
     transition: border-color 0.2s, background 0.2s;
@@ -523,7 +521,7 @@
 
   .award-pill:hover {
     border-color: var(--gold);
-    background: rgba(62,126,181,0.08);
+    background: rgba(201,168,76,0.05);
   }
 
   .award-pill .num {
@@ -539,7 +537,7 @@
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #6a96b8;
+    color: #777;
     margin-top: 0.3rem;
   }
 
@@ -550,12 +548,12 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1px;
-    background: rgba(62,126,181,0.1);
+    background: rgba(255,255,255,0.05);
     margin-top: 3rem;
   }
 
   .social-card {
-    background: #021525;
+    background: #0d0d0d;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -564,7 +562,7 @@
     transition: background 0.2s;
   }
 
-  .social-card:hover { background: #032038; }
+  .social-card:hover { background: #131313; }
 
   .social-platform {
     font-family: 'Barlow Condensed', sans-serif;
@@ -613,9 +611,7 @@
 
   /* ── MISSION BAND ── */
   .mission-band {
-    background: #012C55;
-    border-top: 3px solid #3E7EB5;
-    border-bottom: 3px solid #3E7EB5;
+    background: var(--red);
     padding: 3.5rem 6rem;
     display: flex;
     align-items: center;
@@ -633,7 +629,7 @@
   }
 
   /* ── CONTACT ── */
-  #contact { background: #021222; }
+  #contact { background: #080808; }
 
   .contact-grid {
     display: grid;
@@ -646,7 +642,7 @@
 
   .contact-body {
     font-size: 1rem;
-    color: #7aa3c0;
+    color: #888;
     line-height: 1.8;
     margin-bottom: 2rem;
   }
@@ -677,8 +673,8 @@
   .form-field input,
   .form-field textarea,
   .form-field select {
-    background: #012040;
-    border: 1px solid rgba(62,126,181,0.25);
+    background: #111;
+    border: 1px solid rgba(201,168,76,0.15);
     color: var(--white);
     font-family: 'Barlow', sans-serif;
     font-size: 0.95rem;
@@ -694,120 +690,12 @@
     border-color: var(--gold);
   }
 
-  .form-field select option { background: #012040; }
-
-  /* ── CONSULTING ── */
-  #consulting { background: #012C55; }
-
-  .consulting-intro {
-    max-width: 700px;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #a8c8e0;
-    margin-bottom: 3.5rem;
-  }
-
-  .consulting-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5px;
-    background: rgba(62,126,181,0.2);
-    border: 1px solid rgba(62,126,181,0.2);
-    margin-bottom: 4rem;
-  }
-
-  .consult-card {
-    background: #021d3d;
-    padding: 2.5rem 2rem;
-    position: relative;
-    overflow: hidden;
-    transition: background 0.3s;
-  }
-
-  .consult-card:hover { background: #032850; }
-
-  .consult-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #17507E, #3E7EB5);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.35s ease;
-  }
-
-  .consult-card:hover::after { transform: scaleX(1); }
-
-  .consult-number {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3.5rem;
-    line-height: 1;
-    color: rgba(62,126,181,0.18);
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.04em;
-  }
-
-  .consult-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem;
-    letter-spacing: 0.06em;
-    color: var(--white);
-    margin-bottom: 0.5rem;
-  }
-
-  .consult-tag {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: #3E7EB5;
-    margin-bottom: 1rem;
-  }
-
-  .consult-desc {
-    font-size: 0.9rem;
-    line-height: 1.65;
-    color: #7aa3c0;
-  }
-
-  .consult-cta-block {
-    background: rgba(1,44,85,0.6);
-    border: 1px solid rgba(62,126,181,0.25);
-    padding: 3rem 3.5rem;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 3rem;
-    align-items: center;
-  }
-
-  .consult-cta-block h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.2rem;
-    letter-spacing: 0.06em;
-    color: var(--white);
-    margin-bottom: 0.6rem;
-  }
-
-  .consult-cta-block p {
-    font-size: 0.95rem;
-    color: #7aa3c0;
-    line-height: 1.6;
-    max-width: 520px;
-  }
-
-  .consult-cta-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    flex-shrink: 0;
-  }
+  .form-field select option { background: #111; }
 
   /* ── FOOTER ── */
   footer {
-    background: #010e1c;
-    border-top: 1px solid rgba(62,126,181,0.15);
+    background: var(--ink);
+    border-top: 1px solid rgba(201,168,76,0.1);
     padding: 2.5rem 6rem;
     display: flex;
     align-items: center;
@@ -825,7 +713,7 @@
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.12em;
-    color: #3a6080;
+    color: #444;
   }
 
   .footer-links {
@@ -889,7 +777,6 @@
     <li><a href="#press">Press</a></li>
     <li><a href="#awards">Awards</a></li>
     <li><a href="#social">Connect</a></li>
-    <li><a href="#consulting" style="color:var(--gold);">Hire Ryan</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -1192,77 +1079,6 @@
   </div>
 </section>
 
-<!-- CONSULTING -->
-<section id="consulting">
-  <div class="section-inner">
-    <div class="section-label">Work With Ryan</div>
-    <h2 class="section-title">Consulting &<br>Advisory</h2>
-    <div class="section-rule"></div>
-
-    <p class="consulting-intro">
-      25+ years of building brands, growing businesses, and navigating industries others couldn't crack. Ryan brings hard-won, real-world expertise to founders, operators, and creatives who need someone who's actually done it — not just talked about it.
-    </p>
-
-    <div class="consulting-grid">
-
-      <div class="consult-card">
-        <div class="consult-number">01</div>
-        <div class="consult-title">Tattoo Industry Strategy</div>
-        <div class="consult-tag">Industry · Operations · Growth</div>
-        <p class="consult-desc">Ryan built the largest on-base tattoo brand in U.S. military history from scratch. He knows studio operations, artist management, multi-location expansion, military market penetration, and how to position a tattoo brand to last. Whether you're opening your first shop or scaling to 10, Ryan has walked that road.</p>
-      </div>
-
-      <div class="consult-card">
-        <div class="consult-number">02</div>
-        <div class="consult-title">Brand & Creative Direction</div>
-        <div class="consult-tag">Branding · Design · Identity</div>
-        <p class="consult-desc">60+ national and international awards for design and marketing don't happen by accident. Ryan has built and sold three marketing agencies and directed creative for dozens of brands. From naming and visual identity to digital presence and content strategy — he'll help you build something people remember.</p>
-      </div>
-
-      <div class="consult-card">
-        <div class="consult-number">03</div>
-        <div class="consult-title">Event & Convention Consulting</div>
-        <div class="consult-tag">Events · Sponsorship · Promotion</div>
-        <p class="consult-desc">Founding and running the All American Tattoo Convention since 2016 taught Ryan everything about producing world-class events — logistics, artist booking, sponsorship, community engagement, and turning a convention into a movement. If you're building a live event in the tattoo or creative industries, this is the consultation you need.</p>
-      </div>
-
-      <div class="consult-card">
-        <div class="consult-number">04</div>
-        <div class="consult-title">Digital Marketing & SEO</div>
-        <div class="consult-tag">Marketing · SEO · Paid Ads · Social</div>
-        <p class="consult-desc">Ryan started building brands online before most people had a Facebook account. He's led campaigns, built agencies, and grown businesses through organic SEO, paid media, and social content — with a specialty in local and military market targeting for service businesses.</p>
-      </div>
-
-      <div class="consult-card">
-        <div class="consult-number">05</div>
-        <div class="consult-title">Entrepreneur Mentorship</div>
-        <div class="consult-tag">Mentorship · Accountability · Vision</div>
-        <p class="consult-desc">Ryan has built businesses in wildly different industries — from digital agencies and security companies to tattoo empires and live events. He doesn't offer theory. He offers the hard lessons, the right questions, and the framework that comes from two-plus decades of building, failing, and building again.</p>
-      </div>
-
-      <div class="consult-card">
-        <div class="consult-number">06</div>
-        <div class="consult-title">Military Market Entry</div>
-        <div class="consult-tag">Military · B2G · On-Base Business</div>
-        <p class="consult-desc">ATS is the only tattoo brand permitted to operate inside U.S. military installations. Ryan navigated the MWR system, base command relationships, and the unique demands of serving active-duty communities. For businesses looking to tap into or serve the military market, his experience is unmatched.</p>
-      </div>
-
-    </div>
-
-    <div class="consult-cta-block">
-      <div>
-        <h3>Ready to Work Together?</h3>
-        <p>Ryan takes a limited number of consulting engagements each quarter. Reach out with what you're building — project-based, retainer, or advisory board arrangements considered. No fluff. Just real conversations about real business.</p>
-      </div>
-      <div class="consult-cta-buttons">
-        <a href="#contact" class="btn-primary">Start the Conversation</a>
-        <a href="mailto:ryan@ryanharrell.com" class="btn-ghost">ryan@ryanharrell.com</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
@@ -1276,7 +1092,7 @@
         </p>
         <div style="display:flex; flex-direction:column; gap:0.8rem;">
           <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">Email</div>
-          <div style="color:#ccc;font-size:0.95rem;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aad8d3cbc4ead8d3cbc4c2cbd8d8cfc6c684c9c5c7">[email&#160;protected]</a></div>
+          <div style="color:#ccc;font-size:0.95rem;">ryan@ryanharrell.com</div>
           <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-top:0.5rem;">Location</div>
           <div style="color:#ccc;font-size:0.95rem;">Fayetteville, North Carolina</div>
         </div>
@@ -1301,7 +1117,6 @@
             <label>Reason for Reaching Out</label>
             <select id="reason">
               <option value="">Select one...</option>
-              <option>Consulting Inquiry</option>
               <option>Speaking / Media</option>
               <option>Business Partnership</option>
               <option>American Tattoo Society</option>
@@ -1328,14 +1143,13 @@
   <ul class="footer-links">
     <li><a href="#about">About</a></li>
     <li><a href="#ventures">Ventures</a></li>
-    <li><a href="#consulting">Consulting</a></li>
     <li><a href="#press">Press</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="footer-copy">© 2026 Ryan Harrell · All Rights Reserved</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // ── CONTACT FORM HANDLER ──────────────────────────────────────────
   // 🔧 BACKEND SETUP: Replace the FORM_ENDPOINT value below with your
   //    API route. The form will POST JSON: { firstName, lastName, email,
@@ -1406,9 +1220,9 @@
     const el = document.getElementById('formStatus');
     el.textContent = msg;
     el.style.display = 'block';
-    el.style.borderColor = type === 'success' ? '#3E7EB5' : '#17507E';
-    el.style.color = type === 'success' ? '#a8d4f0' : '#90c0e0';
-    el.style.background = type === 'success' ? 'rgba(62,126,181,0.1)' : 'rgba(23,80,126,0.15)';
+    el.style.borderColor = type === 'success' ? 'var(--gold)' : 'var(--red)';
+    el.style.color = type === 'success' ? 'var(--gold)' : '#e87070';
+    el.style.background = type === 'success' ? 'rgba(201,168,76,0.06)' : 'rgba(184,39,44,0.08)';
   }
 
   // ── SCROLL FADE-UP ANIMATIONS ──────────────────────────────────────
@@ -1418,13 +1232,13 @@
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.venture-card, .press-card, .award-pill, .highlight-card, .social-card, .consult-card').forEach(el => {
+  document.querySelectorAll('.venture-card, .press-card, .award-pill, .highlight-card, .social-card').forEach(el => {
     el.classList.add('fade-up');
     observer.observe(el);
   });
 
   // Stagger children
-  document.querySelectorAll('.ventures-grid, .press-grid, .awards-grid, .social-strip, .about-highlights, .consulting-grid').forEach(grid => {
+  document.querySelectorAll('.ventures-grid, .press-grid, .awards-grid, .social-strip, .about-highlights').forEach(grid => {
     [...grid.children].forEach((child, i) => {
       child.style.transitionDelay = `${i * 0.08}s`;
     });
