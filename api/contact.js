@@ -1,7 +1,7 @@
-import { Resend } from 'resend';
+const { Resend } = require('resend');
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end();
   const { firstName, lastName, email, reason, message } = req.body;
   await resend.emails.send({
