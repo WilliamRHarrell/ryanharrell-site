@@ -159,13 +159,13 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     padding: 0.9rem 2rem;
-    border: 1px solid rgba(201,168,76,0.4);
+    border: 1px solid rgba(62,126,181,0.5);
     color: var(--gold);
     text-decoration: none;
     display: inline-block;
     transition: border-color 0.2s, background 0.2s;
   }
-  .btn-ghost:hover { border-color: var(--gold); background: rgba(201,168,76,0.08); }
+  .btn-ghost:hover { border-color: var(--gold); background: rgba(62,126,181,0.12); }
 
   .hero-right {
     position: relative;
@@ -1415,16 +1415,4 @@
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.venture-card, .press-card, .award-pill, .highlight-card, .social-card, .consult-card').forEach(el => {
-    el.classList.add('fade-up');
-    observer.observe(el);
-  });
-
-  document.querySelectorAll('.ventures-grid, .press-grid, .awards-grid, .social-strip, .about-highlights, .consulting-grid').forEach(grid => {
-    [...grid.children].forEach((child, i) => {
-      child.style.transitionDelay = `${i * 0.08}s`;
-    });
-  });
-</script>
-</body>
-</html>
+  document.querySelectorAll('.venture-card, .press-card, .award-pill, .highlight-card, .social-card, .consult-card').forEach(e
