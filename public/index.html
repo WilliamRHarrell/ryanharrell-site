@@ -4,6 +4,68 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ryan Harrell | Entrepreneur · Builder · Industry Disruptor</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ryan Harrell",
+  "alternateName": "William Ryan Harrell",
+  "url": "https://ryanharrell.com",
+  "jobTitle": "Entrepreneur, Founder & CEO",
+  "description": "Ryan Harrell is an entrepreneur and co-founder of American Tattoo Society, the All American Tattoo Convention, and Skin Reserve. He is based in Fayetteville, North Carolina and builds premium tattoo industry brands.",
+  "image": "https://ryanharrell.com/images/ryan-harrell.jpg",
+  "birthPlace": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "North Carolina",
+      "addressCountry": "US"
+    }
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fayetteville",
+    "addressRegion": "NC",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/ryanharrell",
+    "https://www.instagram.com/williamharrell",
+    "https://twitter.com/williamharrell",
+    "https://www.facebook.com/harrell",
+    "https://www.youtube.com/@ryanharrell24"
+  ],
+  "knowsAbout": [
+    "Tattoo Industry",
+    "Entrepreneurship",
+    "Business Development",
+    "Military Community",
+    "Brand Building"
+  ],
+  "founder": [
+    {
+      "@type": "Organization",
+      "name": "American Tattoo Society",
+      "url": "https://americantattoo.com",
+      "description": "Premium tattoo studio brand serving military communities and beyond."
+    },
+    {
+      "@type": "Organization",
+      "name": "All American Tattoo Convention",
+      "description": "Tattoo convention platform with military-community and charitable focus."
+    },
+    {
+      "@type": "Organization",
+      "name": "Skin Reserve",
+      "description": "Industry-owned, medical-grade tattoo aftercare brand."
+    }
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "American Tattoo Society"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -159,13 +221,13 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     padding: 0.9rem 2rem;
-    border: 1px solid rgba(201,168,76,0.4);
+    border: 1px solid rgba(62,126,181,0.5);
     color: var(--gold);
     text-decoration: none;
     display: inline-block;
     transition: border-color 0.2s, background 0.2s;
   }
-  .btn-ghost:hover { border-color: var(--gold); background: rgba(201,168,76,0.08); }
+  .btn-ghost:hover { border-color: var(--gold); background: rgba(62,126,181,0.12); }
 
   .hero-right {
     position: relative;
@@ -1262,7 +1324,7 @@
       </div>
       <div class="consult-cta-buttons">
         <a href="#contact" class="btn-primary">Start the Conversation</a>
-        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="205259414e605259414e48415252454c4c0e434f4d">[email&#160;protected]</a>
+        ryan@ryanharrell.com
       </div>
     </div>
 
@@ -1282,7 +1344,7 @@
         </p>
         <div style="display:flex; flex-direction:column; gap:0.8rem;">
           <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">Email</div>
-          <div style="color:#ccc;font-size:0.95rem;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="63111a020d23111a020d0b021111060f0f4d000c0e">[email&#160;protected]</a></div>
+          <div style="color:#ccc;font-size:0.95rem;">ryan@ryanharrell.com</div>
           <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-top:0.5rem;">Location</div>
           <div style="color:#ccc;font-size:0.95rem;">Fayetteville, North Carolina</div>
         </div>
@@ -1341,7 +1403,7 @@
   <div class="footer-copy">© 2026 Ryan Harrell · All Rights Reserved</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // ── CONTACT FORM HANDLER ──────────────────────────────────────────
   const FORM_ENDPOINT = '/api/contact';
 
@@ -1408,23 +1470,4 @@
     el.style.background = type === 'success' ? 'rgba(62,126,181,0.1)' : 'rgba(23,80,126,0.15)';
   }
 
-  // ── SCROLL FADE-UP ANIMATIONS ──────────────────────────────────────
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('visible');
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.venture-card, .press-card, .award-pill, .highlight-card, .social-card, .consult-card').forEach(el => {
-    el.classList.add('fade-up');
-    observer.observe(el);
-  });
-
-  document.querySelectorAll('.ventures-grid, .press-grid, .awards-grid, .social-strip, .about-highlights, .consulting-grid').forEach(grid => {
-    [...grid.children].forEach((child, i) => {
-      child.style.transitionDelay = `${i * 0.08}s`;
-    });
-  });
-</script>
-</body>
-</html>
+  // ── SCROLL FADE-UP ANIMATIONS ───────────────────────�
