@@ -866,6 +866,42 @@
     flex-shrink: 0;
   }
 
+  /* ── APPOINTMENT REQUEST ── */
+  .appointment-block {
+    margin-top: 4rem;
+    background: rgba(1,44,85,0.6);
+    border: 1px solid rgba(62,126,181,0.25);
+    padding: 3rem 3.5rem;
+    max-width: 760px;
+    scroll-margin-top: 6rem;
+  }
+
+  .appointment-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+
+  .appointment-intro {
+    font-size: 0.95rem;
+    color: #7aa3c0;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .label-optional {
+    color: #5a83a0;
+    text-transform: none;
+    letter-spacing: 0.05em;
+  }
+
+  /* Keep the native date picker legible on the dark background */
+  .form-field input[type="date"] {
+    color-scheme: dark;
+  }
+
   /* ── FOOTER ── */
   footer {
     background: #010e1c;
@@ -940,6 +976,8 @@
     .mission-band { padding: 2.5rem 2rem; flex-direction: column; }
     footer { flex-direction: column; gap: 1rem; text-align: center; }
     .form-row { grid-template-columns: 1fr; }
+    .consult-cta-block { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
+    .appointment-block { padding: 2rem 1.5rem; }
   }
 </style>
 </head>
@@ -973,7 +1011,7 @@
     </p>
     <div class="hero-cta-row">
       <a href="#ventures" class="btn-primary">See My Work</a>
-      <a href="#contact" class="btn-ghost">Book Ryan</a>
+      <a href="#appointment" class="btn-ghost">Book Ryan</a>
     </div>
   </div>
   <div class="hero-right">
@@ -1323,8 +1361,75 @@
         <p>Ryan takes a limited number of consulting engagements each quarter. Reach out with what you're building — project-based, retainer, or advisory board arrangements considered. No fluff. Just real conversations about real business.</p>
       </div>
       <div class="consult-cta-buttons">
-        <a href="#contact" class="btn-primary">Start the Conversation</a>
+        <a href="#appointment" class="btn-primary">Request a Consultation</a>
         ryan@ryanharrell.com
+      </div>
+    </div>
+
+    <!-- APPOINTMENT REQUEST -->
+    <div id="appointment" class="appointment-block">
+      <div class="section-label">Book Time With Ryan</div>
+      <h3 class="appointment-title">Request a Consultation</h3>
+      <p class="appointment-intro">Tell Ryan what you're working on and when you'd like to talk. He'll confirm your consultation time by email.</p>
+      <div class="contact-form" id="appointmentForm">
+        <div class="form-row">
+          <div class="form-field">
+            <label>First Name</label>
+            <input type="text" id="apptFirstName" placeholder="John">
+          </div>
+          <div class="form-field">
+            <label>Last Name</label>
+            <input type="text" id="apptLastName" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Email</label>
+            <input type="email" id="apptEmail" placeholder="you@example.com">
+          </div>
+          <div class="form-field">
+            <label>Phone <span class="label-optional">(optional)</span></label>
+            <input type="tel" id="apptPhone" placeholder="(910) 555-0100">
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Business / Company <span class="label-optional">(optional)</span></label>
+          <input type="text" id="apptCompany" placeholder="Your business name">
+        </div>
+        <div class="form-field">
+          <label>Consulting Area</label>
+          <select id="apptArea">
+            <option value="">Select one...</option>
+            <option>Tattoo Industry Strategy</option>
+            <option>Brand &amp; Creative Direction</option>
+            <option>Event &amp; Convention Consulting</option>
+            <option>Digital Marketing &amp; SEO</option>
+            <option>Entrepreneur Mentorship</option>
+            <option>Military Market Entry</option>
+            <option>Not Sure Yet</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Preferred Date</label>
+            <input type="date" id="apptDate">
+          </div>
+          <div class="form-field">
+            <label>Preferred Time</label>
+            <select id="apptTime">
+              <option value="">No preference</option>
+              <option>Morning (9am–12pm ET)</option>
+              <option>Afternoon (12pm–5pm ET)</option>
+              <option>Evening (5pm–8pm ET)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>What Are You Building?</label>
+          <textarea id="apptDetails" rows="4" placeholder="A little context so Ryan can come prepared..."></textarea>
+        </div>
+        <div id="apptStatus" style="display:none;font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;letter-spacing:0.08em;padding:0.8rem 1rem;border-left:3px solid;"></div>
+        <button class="btn-primary" id="apptSubmitBtn" style="align-self:flex-start;border:none;cursor:pointer;">Request Appointment</button>
       </div>
     </div>
 
@@ -1409,6 +1514,9 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('submitBtn').addEventListener('click', handleSubmit);
+    document.getElementById('apptSubmitBtn').addEventListener('click', handleAppointmentSubmit);
+    // Appointment date can't be in the past
+    document.getElementById('apptDate').min = new Date().toISOString().split('T')[0];
   });
 
   async function handleSubmit() {
@@ -1459,6 +1567,68 @@
       btn.textContent = 'Send Message';
       btn.disabled = false;
     }
+  }
+
+  // ── APPOINTMENT FORM HANDLER ──────────────────────────────────────
+  async function handleAppointmentSubmit() {
+    const btn = document.getElementById('apptSubmitBtn');
+
+    const payload = {
+      firstName:     document.getElementById('apptFirstName').value.trim(),
+      lastName:      document.getElementById('apptLastName').value.trim(),
+      email:         document.getElementById('apptEmail').value.trim(),
+      phone:         document.getElementById('apptPhone').value.trim(),
+      company:       document.getElementById('apptCompany').value.trim(),
+      area:          document.getElementById('apptArea').value,
+      preferredDate: document.getElementById('apptDate').value,
+      preferredTime: document.getElementById('apptTime').value,
+      details:       document.getElementById('apptDetails').value.trim(),
+    };
+
+    if (!payload.firstName || !payload.email || !payload.area || !payload.preferredDate) {
+      showApptStatus('Please fill in your name, email, consulting area, and preferred date.', 'error');
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
+      showApptStatus('Please enter a valid email address.', 'error');
+      return;
+    }
+
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch('/api/appointment', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (res.ok) {
+        showApptStatus('Request received. Ryan will confirm your consultation time by email.', 'success');
+        ['apptFirstName','apptLastName','apptEmail','apptPhone','apptCompany','apptArea','apptDate','apptTime','apptDetails'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.value = '';
+        });
+      } else {
+        throw new Error(`Server responded with ${res.status}`);
+      }
+    } catch (err) {
+      console.error('Appointment form error:', err);
+      showApptStatus('Something went wrong. Email ryan@ryanharrell.com directly.', 'error');
+    } finally {
+      btn.textContent = 'Request Appointment';
+      btn.disabled = false;
+    }
+  }
+
+  function showApptStatus(msg, type) {
+    const el = document.getElementById('apptStatus');
+    el.textContent = msg;
+    el.style.display = 'block';
+    el.style.borderColor = type === 'success' ? '#3E7EB5' : '#17507E';
+    el.style.color = type === 'success' ? '#a8d4f0' : '#90c0e0';
+    el.style.background = type === 'success' ? 'rgba(62,126,181,0.1)' : 'rgba(23,80,126,0.15)';
   }
 
   function showStatus(msg, type) {
